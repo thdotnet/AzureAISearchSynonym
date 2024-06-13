@@ -3,3 +3,6 @@
 ################################################################################
 
 /AzureAISearchSynonymMap/AzureAISearchSynonymMap.csproj
+/ConsoleApp1/bin/Debug/net7.0
+/ConsoleApp1/obj
+/AzureAISearchSynonymMap/.vs/AzureAISearchSynonymMap
