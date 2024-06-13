@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.7.34024.191
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AzureAISearchSynonymMap", "AzureAISearchSynonymMap.csproj", "{D0647019-F1F3-4D6D-8869-A91478E50F20}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp1", "..\ConsoleApp1\ConsoleApp1.csproj", "{4D25B5FB-0261-48D7-AD01-050ACA094CAF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +11,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{D0647019-F1F3-4D6D-8869-A91478E50F20}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D0647019-F1F3-4D6D-8869-A91478E50F20}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D0647019-F1F3-4D6D-8869-A91478E50F20}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D0647019-F1F3-4D6D-8869-A91478E50F20}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4D25B5FB-0261-48D7-AD01-050ACA094CAF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D25B5FB-0261-48D7-AD01-050ACA094CAF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4D25B5FB-0261-48D7-AD01-050ACA094CAF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4D25B5FB-0261-48D7-AD01-050ACA094CAF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
