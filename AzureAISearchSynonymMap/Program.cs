@@ -1,8 +1,6 @@
-﻿using Azure;
-using Azure.Search.Documents;
+using Azure;
 using Azure.Search.Documents.Indexes;
 using Azure.Search.Documents.Indexes.Models;
-using Azure.Search.Documents.Models;
 
 class Program
 {
@@ -30,25 +28,17 @@ class Program
         var indexResponse = await indexClient.GetIndexAsync(indexName);
         var index = indexResponse.Value;
 
-        var searchableField = new SearchableField("content2");
-        searchableField.SynonymMapNames.Add("abbreviations");
-
-        index.Fields.Add(searchableField);
+        foreach(var field in index.Fields)
+        {
+            if (field.IsSearchable.HasValue && field.IsSearchable.Value == true)
+            {
+                field.SynonymMapNames.Add("abbreviations");
+            }
+        }
 
         indexClient.CreateOrUpdateIndex(index);
 
-        var results = new List<SearchDocument>();
-        var searchClient = indexClient.GetSearchClient(indexName);
-        var response = await searchClient.SearchAsync<SearchDocument>("*", new SearchOptions { } );
-
-        await foreach (var result in response.Value.GetResultsAsync())
-        {
-            result.Document["content2"] = result.Document["content"];
-            results.Add(result.Document);
-        }
-
-        searchClient.MergeDocuments(results);
-
         Console.WriteLine("Synonym map added to the index successfully.");
+        Console.ReadLine();
     }
 }
